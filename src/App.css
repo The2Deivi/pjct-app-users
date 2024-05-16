@@ -1,0 +1,65 @@
+.title {
+  display: grid;
+  justify-items: center;
+  height: 1.5em;
+  font-size: 4em;
+  color: red;
+  text-decoration: underline red;
+  animation: cambioColor 2s infinite;
+
+  .text {
+    color: black;
+  }
+
+}
+
+@keyframes cambioColor {
+  0% {
+    color: red;
+    text-decoration-color: red;
+  }
+
+  25% {
+    color: blue;
+    text-decoration-color: blue;
+  }
+
+  50% {
+    color: red;
+    text-decoration-color: red;
+  }
+
+  75% {
+    color: blue;
+    text-decoration-color: blue;
+  }
+
+  100% {
+    color: red;
+    text-decoration-color: red;
+  }
+}
+
+.btn-create {
+  display: grid;
+  padding: 0.6em;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 2em auto 3em;
+  border-radius: 0.5em;
+  background-color: blue;
+  color: white;
+  
+  &:hover {
+    box-shadow: 3px 6px 15px #000000;
+    background-color: red;
+    filter: brightness(1.1);
+  }
+}
+
+.user-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  justify-items: center;
+  gap: 2em;
+}

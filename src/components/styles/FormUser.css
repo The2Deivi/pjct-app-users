@@ -1,0 +1,122 @@
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0002;
+  backdrop-filter: blur(2px);
+  transition: transform 100ms ease;
+  z-index: 999;
+}
+
+.form__close {
+  transform: scale(0);
+}
+
+.form {
+  width: 100%;
+  max-width: 25em;
+  padding: 1em 1em 1em;
+  background-color: white;
+  border-radius: 0.8em;
+  position: relative;
+}
+
+.form__exit {
+  position: absolute;
+  font-size: 1.3em;
+  right: 1.8em;
+  top: 0.5em;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.form__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.form__list {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.form__field {
+  display: grid;
+  gap: 0.4em;
+}
+
+.form__label {
+  font-size: 0.9em;
+  padding-left: 1em;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  /* Ancho del contenedor (ajustado al 100% del ancho disponible) */
+  max-width: 400px;
+  /* Ancho máximo del contenedor (ajusta según necesidades) */
+}
+
+.form__icon {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(5%);
+  right: 10px;
+  /* Ajusta la posición del icono a la derecha */
+  font-size: 20px;
+  /* Tamaño de fuente del icono (ajusta según necesidades) */
+  cursor: pointer;
+}
+
+.form__input.error {
+  border-color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.error-message {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+  padding: 10px;
+  margin-top: -5px;
+  margin-bottom: -34px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+}
+
+.error-message.active {
+  display: grid;
+}
+
+.form__input {
+  padding: 0.4em 1em;
+  font-weight: 300;
+  border-radius: 0.4em;
+  border: 0.1em solid #ccc;
+}
+
+.form__btn {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 0.5em;
+  background-color: blue;
+  color: white;
+}
